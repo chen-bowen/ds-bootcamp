@@ -3,13 +3,12 @@ from flask import Flask
 def create_app():
     app = Flask(__name__)
 
-    @app.route("/")
+    @app.route("/bowen_hello")
     def hello_world():
         return "Hello, World", 200
     
-    @app.route("/bye")
+    @app.route("/bowen_bye")
     def goodbye_world():
-        raise Exception ("blah")
         return "Goodbye, World", 200
 
     return app
